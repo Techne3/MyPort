@@ -8,6 +8,7 @@ const useStyles = makeStyles((theme) => ({
     background: "#233",
     height: "100%",
   },
+
   timeLine: {
     position: "relative",
     padding: "1rem",
