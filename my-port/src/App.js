@@ -1,25 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import "./App.css";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import { Navbar } from "./components";
+import Home from "./components/NewNav/Home";
+import Resume from "./components/Resume/Resume";
+import { Route } from "react-router-dom";
+import Portfolio from "./components/Portfolio/Portfolio";
+import Contact from "./components/Contacts/Contact";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <CssBaseline />
+      <Route exact path="/" component={Home} />
+      <Route path="/resume" component={Resume} />
+      <Route path="/portfolio" component={Portfolio} />
+      <Route path="/contact" component={Contact} />
+    </>
   );
 }
 
